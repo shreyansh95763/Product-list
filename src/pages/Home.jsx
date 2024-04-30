@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import axios from 'axios'; // Import Axios
 import { filteredData } from '../data/filterData';
 import ProductCard from '../components/ProductCard';
@@ -46,12 +45,12 @@ const Home = () => {
     // return <div className='font-bold text-3xl text-center mt-10'>Loading...</div>;
   }
 
-  
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10">
       {products.length != 0 && products?.map(product => (
         <div key={product.id} className="bg-white rounded shadow-md px-4  border border-gray-300">
-          <ProductCard product={product}/>
+          <ProductCard products={product}/>
         </div>
       ))}
     </div>

@@ -1,10 +1,10 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import Heart from '../assets/heart.svg';
 
-const ProductCard = ({product}) => {
-  const { id, image, variant_name, stock_sataus, actual_price, price, discount_percent, variant_id } = product;
- console.log("Product",product);
+const ProductCard = ({products}) => {
+  const { id, image, variant_name, stock_sataus, actual_price, price, discount_percent, variant_id } = products;
+//  console.log("Product",product);
   return (
     <Link to={`/product?product_id=${id}&variant_id=${variant_id}`}>
     <div className="bg-white  hadow-md overflow-hidden">

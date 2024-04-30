@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import star from '../assets/star.svg';
 import locationIcon from '../assets/location.svg';
 import commonIcon from '../assets/replacement.svg';
@@ -91,8 +91,8 @@ console.log("Variant Id :",variantId);
 
           <div className='  w-[35vw]'>
             <h1 className="text-2xl font-bold">{product.product_variant_name}</h1>
-            <div className='flex my-1'>{[1, 1, 1, 1, 1].map((a) => (
-              <span><img src={star} alt="" className='w-5 h-5' /></span>
+            <div className='flex my-1'>{[1, 1, 1, 1, 1].map((_, index) => (
+              <span key={index}><img src={star} alt="imgs" className='w-5 h-5' /></span>
             ))}</div>
 
             <p className="text-green-600 font-semibold text-lg">{product.stock_sataus}</p>
